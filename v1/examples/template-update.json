@@ -1,0 +1,12 @@
+{
+    "update": {
+        "id": "h387afy7-B898-253F93F1F48C",
+        "tenantId": "h387afy7",
+        "resourceVersion": "2022090912432146",
+        "subObject": {
+            "intValue": 42,
+            "strValue": "This string must be here"
+        },
+        "createdAt": "2022-09-13T12:14:15"
+    }
+}

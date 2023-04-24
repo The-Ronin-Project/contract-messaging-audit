@@ -1,0 +1,21 @@
+name: Event Contract CI/CD
+
+on:
+  push:
+    branches: 
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build_and_test:
+    name: build_and_test
+    uses: projectronin/github/.github/workflows/event_contract_cicd.yaml@master
+    with:
+      schema_name: ronin-contract-event-template
+      publish: ${{ github.ref == 'refs/heads/main' }}
+    secrets:
+      docker_username: ${{ secrets.NEXUS_DOCKER_USERNAME }}
+      docker_password: ${{ secrets.NEXUS_DOCKER_PASSWORD }}
+      nexus_user:      ${{ secrets.NEXUS_RAW_USER }}
+      nexus_token:     ${{ secrets.NEXUS_RAW_TOKEN }}

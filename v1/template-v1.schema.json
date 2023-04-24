@@ -1,0 +1,100 @@
+{
+  "$id": "https://github.com/projectronin/ronin-contract-event-template/blob/main/v1/template-v1.schema.json",
+  "title": "Template Schema",
+  "description": "This is an example schema. Replace this with an actual schema.",
+  "type": "object",
+  "properties": {
+    "create" : {
+      "description": "This represents a create event.",
+      "$ref": "#/$defs/resource"
+    },
+    "update": {
+      "description": "This represents an update event",
+      "$ref": "#/$defs/resource"
+    },
+    "delete": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The primary identifier of the resource"
+        },
+        "tenantId": {
+          "type": "string",
+          "description": "Tenant ID"
+        },
+        "deletedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The time when the resource was deleted"
+        }
+      },
+      "required": ["id", "tenantId", "deletedAt"]
+    }
+  },
+  "$defs":  {
+    "reusedSchema": {
+      "type": "object",
+      "properties": {
+        "intValue": {
+          "type": "integer",
+          "description": "This is a required integer value"
+        },
+        "strValue": {
+          "type": "string",
+          "description": "This is a required string value"
+        },
+        "dateValue": {
+          "type": "string",
+          "format": "date",
+          "description": "This is an optional date value"
+        },
+        "dateTimeValue": {
+          "type": "string",
+          "format": "date-time",
+          "description": "This is an optional date + time value"
+        }
+      },
+      "required": ["intValue", "strValue"]
+    },
+    "resource": {
+      "type": "object",
+      "description": "The resource representation",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Resource ID"
+        },
+        "tenantId": {
+          "type": "string",
+          "description": "The tenant ID"
+        },
+        "resourceVersion": {
+          "type": "string",
+          "description": "An monotonically incrementing version used for ordering representations"
+        },
+        "subObject": {
+          "$ref": "#/$defs/reusedSchema",
+          "description": "A nested subObject that is defined separately"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When was the resource created"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When want the resource last updated"
+        }
+      },
+      "required": [
+        "id", 
+        "tenantId", 
+        "resourceVersion", 
+        "subObject", 
+        "createdAt"
+      ]
+    }
+  }
+}
