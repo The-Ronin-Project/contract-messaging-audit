@@ -48,13 +48,6 @@
       "type": "string",
       "description": "The action of the audit entry. CREATE, UPDATE, READ, DELETE"
     },
-    "dataMap": {
-      "description": "Map of extra data to be included with the audit entry",
-      "type": "object",
-      "additionalProperties": {
-        "type": "string"
-      }
-    },
     "reportedAt": {
       "type": "string",
       "format": "date-time",
