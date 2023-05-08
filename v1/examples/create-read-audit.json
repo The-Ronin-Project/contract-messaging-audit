@@ -1,0 +1,17 @@
+{
+    "id":"922f6ea6-2f49-48e1-8c81-3eb6076deb3a",
+    "tenantId":"apposnd",
+    "userId":"3e066064-b1b5-4560-ba0e-5bfba57cad9c",
+    "userFirstName":"Carl",
+    "userLastName":"Graving",
+    "userFullName":"Carl Graving",
+    "resourceCategory":"Patient",
+    "resourceType":"Asset",
+    "resourceId":"39654550-f235-4128-8760-5d36779f4533",
+    "mrn":"",
+    "action":"READ",
+    "dataMap": {
+        "patientId":"patient1234"
+    },
+    "reportedAt":"2023-05-06T01:27:51.979006Z"
+}

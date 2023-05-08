@@ -1,0 +1,78 @@
+{
+  "$id": "https://github.com/projectronin/ronin-contract-event-template/blob/main/v1/template-v1.schema.json",
+  "title": "Audit Create Command",
+  "description": "This schema is used as the schema to create audit entries.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The primary identifier of the audit entry"
+    },
+    "tenantId": {
+      "type": "string",
+      "description": "Tenant ID"
+    },
+    "userId": {
+      "type": "string",
+      "description": "ID fo the User that is interacting with the data"
+    },
+    "userFirstName": {
+      "type": "string",
+      "description": "User's first name"
+    },
+    "userLastName": {
+      "type": "string",
+      "description": "User's last name"
+    },
+    "userFullName": {
+      "type": "string",
+      "description": "User's full name"
+    },
+    "resourceCategory": {
+      "type": "string",
+      "description": "Category of the Resource that is the target of the audit entry"
+    },
+    "resourceType": {
+      "type": "string",
+      "description": "Type of the Resource that is the target of the audit entry"
+    },
+    "resourceId": {
+      "type": "string",
+      "description": "ID of the Resource that is the target of the audit entry"
+    },
+    "mrn": {
+      "type": "string",
+      "description": "Patient MRN if available"
+    },
+    "action": {
+      "type": "string",
+      "description": "The action of the audit entry. CREATE, UPDATE, READ, DELETE"
+    },
+    "dataMap": {
+      "description": "Map of extra data to be included with the audit entry",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "reportedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "DateTime the audit event happened"
+    }
+  },
+  "required": [
+    "id",
+    "tenantId",
+    "userId",
+    "userFirstName",
+    "userLastName",
+    "userFullName",
+    "resourceCategory",
+    "resourceId",
+    "resourceType",
+    "mrn",
+    "action",
+    "reportedAt"
+  ]
+}

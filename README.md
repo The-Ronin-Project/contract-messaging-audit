@@ -1,7 +1,7 @@
-# Event Contract Template
+# Audit Messaging Temaplates
 
 # Scope
-Describe what types of data are included in this schema and how they should be interpreted. This description is valuable to get alignment between the Producers and Consumers about what we intend to message. 
+Audit Messages will contain command and event messages pertaining to Audit records and the Audit Service 
 
 # Initial Setup
 
