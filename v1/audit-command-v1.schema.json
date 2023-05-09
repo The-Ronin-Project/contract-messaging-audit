@@ -1,13 +1,9 @@
 {
-  "$id": "https://github.com/projectronin/ronin-contract-event-template/blob/main/v1/template-v1.schema.json",
+  "$id": "audit-command-v1",
   "title": "Audit Create Command",
   "description": "This schema is used as the schema to create audit entries.",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "description": "The primary identifier of the audit entry"
-    },
     "tenantId": {
       "type": "string",
       "description": "Tenant ID"
@@ -48,21 +44,19 @@
       "type": "string",
       "description": "The action of the audit entry. CREATE, UPDATE, READ, DELETE"
     },
-    "dataMap": {
-      "description": "Map of extra data to be included with the audit entry",
-      "type": "object",
-      "additionalProperties": {
-        "type": "string"
-      }
-    },
     "reportedAt": {
       "type": "string",
       "format": "date-time",
       "description": "DateTime the audit event happened"
+    },
+    "dataMap": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "required": [
-    "id",
     "tenantId",
     "userId",
     "userFirstName",
