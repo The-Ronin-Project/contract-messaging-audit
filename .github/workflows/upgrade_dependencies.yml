@@ -40,5 +40,5 @@ jobs:
           gitUserName: "github-actions[bot]"
           pullRequestsMax: ${{ github.event.inputs.maxPRs || '10' }}
           pullRequestLabels: "dependencies"
-          pullRequestAssignee: "arssycro"
+          pullRequestAssignee: "@projectronin/pe-core"
           baseBranch: "main"
