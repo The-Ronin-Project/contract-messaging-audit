@@ -2,3 +2,4 @@ docs/
 build/
 v*/version
 .idea
+.gradle
