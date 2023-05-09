@@ -4,10 +4,6 @@
   "description": "This schema is used as the schema to create audit entries.",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "description": "The primary identifier of the audit entry"
-    },
     "tenantId": {
       "type": "string",
       "description": "Tenant ID"
@@ -55,7 +51,6 @@
     }
   },
   "required": [
-    "id",
     "tenantId",
     "userId",
     "userFirstName",
