@@ -30,7 +30,7 @@ jobs:
     if: ${{ github.event.inputs.skip_publish == 'false' }}
     uses: projectronin/github/.github/workflows/event_contract_cicd.yaml@master
     with:
-      schema_name: ronin-contract-questionnaire-response
+      schema_name: ronin-contract-messaging-audit
       publish: true
     secrets:
       docker_username: ${{ secrets.NEXUS_DOCKER_USERNAME }}
